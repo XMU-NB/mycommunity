@@ -20,6 +20,7 @@
 
 [Visual Paradigm](https://www.visual-paradigm.com)
 
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)
 
 ## 脚本
 ```sql
@@ -33,3 +34,6 @@
   	GMT_MODIFIED BIGINT
   );
 ``` 
+```bash
+ mvn flyway:migrate
+```
