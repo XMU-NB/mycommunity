@@ -1,13 +1,14 @@
-package cn.edu.xmu.model;
+package cn.edu.xmu.dto;
 
+import cn.edu.xmu.model.User;
 import lombok.Data;
 
 /**
- * @author NieBin
- * @create 2020-05-30 20:09
+ * @auther NieBin
+ * @create 2020-05-24 17:06
  */
 @Data
-public class Question {
+public class QuestionDTO {
     private Integer id;
     private String title;
     private String description;
@@ -18,4 +19,5 @@ public class Question {
     private Integer viewCount;
     private Integer commentCount;
     private Integer likeCount;
+    private User user;
 }

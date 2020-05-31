@@ -15,12 +15,17 @@
 
 [Spring MVC](https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html#mvc-handlermapping-interceptor) 
 
+[菜鸟教程](https://www.runoob.com)
+
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
 ##工具
 [Git](https://git-scm.com/)
 
 [Visual Paradigm](https://www.visual-paradigm.com)
 
 [Flyway](https://flywaydb.org/getstarted/firststeps/maven)
+
+[Lombok](https://projectlombok.org)
 
 ## 脚本
 ```sql
