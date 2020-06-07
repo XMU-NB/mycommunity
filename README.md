@@ -1,6 +1,7 @@
 ##程序猿社区
 
 ##资料
+
 [Spring 文档](https://spring.io/guides)
 
 [Spring web](https://spring.io/guides/gs/serving-web-content/)
@@ -20,6 +21,7 @@
 [Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
 
 ##工具
+
 [Git](https://git-scm.com/)
 
 [Visual Paradigm](https://www.visual-paradigm.com)
@@ -28,7 +30,10 @@
 
 [Lombok](https://projectlombok.org)
 
+[postman](https://chrome.google.com/webstore/detail/tabbed-postman-rest-clien/coohjcphdfgbiolnekdpbcijmhambjff)
+
 ## 脚本
+
 ```sql
   create table USER
   (
@@ -42,4 +47,5 @@
 ``` 
 ```bash
  mvn flyway:migrate
+ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
