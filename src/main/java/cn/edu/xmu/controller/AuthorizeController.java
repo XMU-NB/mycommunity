@@ -45,12 +45,15 @@ public class AuthorizeController {
     public String callback(@RequestParam(name = "code") String code,
                            @RequestParam(name = "state") String state,
                            HttpServletResponse response) {
+        // AccessTokenDTO封装了post的请求参数
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(clientId);
         accessTokenDTO.setClient_secret(clientSecret);
         accessTokenDTO.setCode(code);
         accessTokenDTO.setRedirect_uri(redirectUri);
         accessTokenDTO.setState(state);
+
+
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);
         if (githubUser != null && (githubUser.getId())!=null) {
@@ -60,8 +63,8 @@ public class AuthorizeController {
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setAvatarUrl(githubUser.getAvatarUrl());
-            userService.createOrUpdate(user);
-            //登录成功，写cookie和session
+            userService.createOrUpdate(user);//数据库的存储代替session的写入
+            //登录成功，写cookie和session,把数据库中的token写入到cookie中
             response.addCookie(new Cookie("token",token));
             return "redirect:/";
         } else {

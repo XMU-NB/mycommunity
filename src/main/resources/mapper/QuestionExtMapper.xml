@@ -51,7 +51,7 @@
               and title regexp #{search}
           </if>
         </where>
-        order by gmt_create desc limit #{page},#{size}
+        order by gmt_create desc limit #{offset},#{size}
   </select>
 
 </mapper>
